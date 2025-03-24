@@ -16,22 +16,22 @@
   --base0E: hsl(300 33% 70%);
   --base0F: hsl(214 30% 55%);
 
-  .CodeMirror {
+  .cm-editor {
     /* Background color of main window */
     background-color: var(--base00);
     --fat-cursor-color: var(--base0C);
 
-    .CodeMirror-scroll,
-    .CodeMirror-dialog {
+    .cm-scroll,
+    .cm-dialog {
       /* Color of otherwise un-styled text */
       color: var(--base01);
     }
-    .CodeMirror-gutters {
+    .cm-gutters {
       /* Gutter to the left */
       background-color: var(--base00);
       border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .CodeMirror-linenumber {
+    .cm-gutters .cm-lineNumbers {
       /* Line numbers in the gutter */
       color: var(--base06);
     }
