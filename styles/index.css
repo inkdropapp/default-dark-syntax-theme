@@ -1,42 +1,62 @@
 /*── Palette (Base16-ish) ───────────────────────────────────────────────────*/
 :root {
-  --bd-base00: hsl(210 6% 20%);
-  --bd-base01: hsl(0 0% 87%);
-  --bd-base02: hsl(220 100% 86%);
-  --bd-base03: hsl(0 0% 69%);
-  --bd-base04: hsl(0 0% 82%);
-  --bd-base05: hsl(0 0% 88%);
-  --bd-base06: hsl(0 0% 50%);
-  --bd-base07: hsl(0 0% 0%);
-  --bd-base08: hsl(1 42% 46%);
-  --bd-base09: hsl(21 97% 56%);
-  --bd-base0A: hsl(34 98% 59%);
-  --bd-base0B: hsl(174 28% 64%);
-  --bd-base0C: hsl(80 42% 58%);
-  --bd-base0D: hsl(198 56% 63%);
-  --bd-base0E: hsl(300 33% 70%);
-  --bd-base0F: hsl(216 33% 55%);
+  --hsl-base00: var(--hsl-neutral-950);
+  --hsl-base01: var(--hsl-neutral-100);
+  --hsl-base02: var(--hsl-blue-200);
+  /* --hsl-base03: 0 0% 69%; */
+  --hsl-base03: var(--hsl-neutral-400);
+  /* --hsl-base04: 0 0% 82%; */
+  --hsl-base04: var(--hsl-neutral-300);
+  /* --hsl-base05: 0 0% 88%; */
+  --hsl-base05: var(--hsl-neutral-200);
+  /* --hsl-base06: 0 0% 50%; */
+  --hsl-base06: var(--hsl-neutral-500);
+  --hsl-base07: var(--hsl-black);
+  --hsl-base08: 1 42% 46%;
+  --hsl-base09: 21 97% 56%;
+  --hsl-base0A: 34 98% 59%;
+  --hsl-base0B: 174 28% 64%;
+  --hsl-base0C: 80 42% 58%;
+  --hsl-base0D: 198 56% 63%;
+  --hsl-base0E: 300 33% 70%;
+  --hsl-base0F: 216 33% 55%;
+
+  --bd-base00: hsl(var(--hsl-base00));
+  --bd-base01: hsl(var(--hsl-base01));
+  --bd-base02: hsl(var(--hsl-base02));
+  --bd-base03: hsl(var(--hsl-base03));
+  --bd-base04: hsl(var(--hsl-base04));
+  --bd-base05: hsl(var(--hsl-base05));
+  --bd-base06: hsl(var(--hsl-base06));
+  --bd-base07: hsl(var(--hsl-base07));
+  --bd-base08: hsl(var(--hsl-base08));
+  --bd-base09: hsl(var(--hsl-base09));
+  --bd-base0A: hsl(var(--hsl-base0A));
+  --bd-base0B: hsl(var(--hsl-base0B));
+  --bd-base0C: hsl(var(--hsl-base0C));
+  --bd-base0D: hsl(var(--hsl-base0D));
+  --bd-base0E: hsl(var(--hsl-base0E));
+  --bd-base0F: hsl(var(--hsl-base0F));
 
   --bd-bg: var(--bd-base00);
-  --bd-bg-dark: hsl(210 7% 18%);
-  --bd-bg-highlight: color-mix(in srgb, var(--bd-base02), transparent 90%);
-  --bd-selection: color-mix(in srgb, hsl(220 100% 86%), transparent 80%);
-  --bd-cursor: var(--bd-base01);
+  --bd-bg-highlight: hsl(var(--hsl-base02) / 10%);
+  --bd-selection: hsl(var(--hsl-base02) / 20%);
+  --bd-cursor: hsl(var(--hsl-base01));
 }
 
 .cm-editor {
   --editor-foreground-color: var(--bd-base01);
-  --editor-background-color: var(--bd-bg);
+  --editor-background-color: var(--bd-base00);
   --editor-caret-color: var(--bd-cursor);
   --editor-selection-background: var(--bd-selection);
   --editor-focused-selection-background: var(--bd-selection);
   --editor-active-line-background-color: var(--bd-bg-highlight);
   --editor-special-char-color: var(--bd-base0B);
-  --editor-gutter-border-right: 1px solid #ffffff10;
+  --editor-gutter-border-right: 1px solid hsl(var(--hsl-base01) / 10%);
   --editor-gutter-color: var(--bd-base06);
-  --editor-gutter-background-color: var(--bd-bg-dark);
+  --editor-gutter-background-color: hsl(var(--hsl-neutral-900));
   --editor-active-line-gutter-background-color: var(--bd-bg-highlight);
-  --editor-panel-background-color: var(--bd-bg-dark);
+  --editor-panel-background-color: hsl(var(--hsl-neutral-900));
   --editor-panel-color: var(--bd-base03);
   --editor-tooltip-border: 1px solid var(--bd-bg-highlight);
   --editor-tooltip-border-radius: 0.4em;
@@ -58,21 +78,13 @@
   --editor-completion-detail-text-decoration: none;
   --editor-completion-detail-font-style: normal;
   --editor-completion-detail-font-weight: normal;
-  --editor-matching-bracket-outline: 1px solid var(--bd-base02);
-  --editor-matching-bracket-background-color: var(--bd-bg-dark);
+  --editor-matching-bracket-outline: 1px solid hsl(var(--hsl-base0D) / 90%);
+  --editor-matching-bracket-background-color: hsl(var(--hsl-base02) / 10%);
   --editor-nonmatching-bracket-outline: 1px solid var(--bd-base03);
   --editor-nonmatching-bracket-background-color: transparent;
-  --editor-search-match-background-color: color-mix(
-    in srgb,
-    var(--bd-base09),
-    transparent 60%
-  );
+  --editor-search-match-background-color: hsl(var(--hsl-base09) / 40%);
   --editor-search-match-outline: none;
-  --editor-search-match-selected-background-color: color-mix(
-    in srgb,
-    var(--bd-base0A),
-    transparent 60%
-  );
+  --editor-search-match-selected-background-color: hsl(var(--hsl-base0A) / 40%);
   --editor-search-match-selected-outline: 1px solid var(--bd-base02);
   --editor-placeholder-color: var(--bd-base03);
   --editor-highlight-space-color: var(--bd-bg-highlight);
@@ -86,11 +98,11 @@
 
   --md-codeblock-border-color: var(--bd-bg-highlight);
   --md-codeblock-border-width: 1px;
-  --md-codeblock-background-color: var(--bd-bg-dark);
+  --md-codeblock-background-color: hsl(var(--hsl-neutral-900));
 
   --md-table-border-color: var(--bd-bg-highlight);
   --md-table-border-width: 1px;
-  --md-table-background-color: var(--bd-bg-dark);
+  --md-table-background-color: hsl(var(--hsl-neutral-900));
 }
 
 /*============================================================================
@@ -199,8 +211,9 @@
   }
 
   /* quotes / block-quotes ---------------------------------------------*/
-  .tok-quote {
-    color: var(--bd-base01);
+  .tok-quote:not(.md-alert) {
+    color: var(--bd-base03);
+    font-style: italic;
   }
 
   /* strings ------------------------------------------------------------*/
@@ -294,8 +307,8 @@
   .md-hard-break {
     /* add styles if desired */
   }
-  .md-quote-mark {
-    /* … */
+  .md-quote-mark.tok-quote {
+    color: var(--bd-base0B);
   }
   .md-list-mark {
     /* … */
