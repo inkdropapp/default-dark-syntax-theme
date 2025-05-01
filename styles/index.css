@@ -333,27 +333,27 @@
   .md-task-marker {
   }
   .md-blockquote {
-    margin-left: 4px;
-    border-left: 4px solid var(--bd-base06);
+    margin-left: 0.2em;
+    border-left: 0.3em solid var(--bd-base06);
   }
   .md-alert-note {
-    margin-left: 4px;
-    border-left: 4px solid var(--gfm-alert-note);
+    margin-left: 0.2em;
+    border-left: 0.3em solid var(--gfm-alert-note);
   }
   .md-alert-tip {
-    margin-left: 4px;
-    border-left: 4px solid var(--gfm-alert-tip);
+    margin-left: 0.2em;
+    border-left: 0.3em solid var(--gfm-alert-tip);
   }
   .md-alert-important {
-    margin-left: 4px;
-    border-left: 4px solid var(--gfm-alert-important);
+    margin-left: 0.2em;
+    border-left: 0.3em solid var(--gfm-alert-important);
   }
   .md-alert-warning {
-    margin-left: 4px;
-    border-left: 4px solid var(--gfm-alert-warning);
+    margin-left: 0.2em;
+    border-left: 0.3em solid var(--gfm-alert-warning);
   }
   .md-alert-caution {
-    margin-left: 4px;
-    border-left: 4px solid var(--gfm-alert-caution);
+    margin-left: 0.2em;
+    border-left: 0.3em solid var(--gfm-alert-caution);
   }
 }
