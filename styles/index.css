@@ -41,7 +41,7 @@
   --bd-bg: var(--bd-base00);
   --bd-bg-highlight: hsl(var(--hsl-base02) / 10%);
   --bd-selection: hsl(var(--hsl-base02) / 20%);
-  --bd-cursor: hsl(var(--hsl-base01));
+  --bd-cursor: hsl(var(--hsl-base0D));
 }
 
 .cm-editor {
