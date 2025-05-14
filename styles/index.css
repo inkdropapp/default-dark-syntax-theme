@@ -246,7 +246,9 @@
   }
 
   /* comments -----------------------------------------------------------*/
-  .tok-comment {
+  .tok-line-comment,
+  .tok-block-comment,
+  .tok-doc-comment {
     color: var(--bd-base06);
     font-style: italic;
   }
