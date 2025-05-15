@@ -44,7 +44,7 @@
   --bd-cursor: hsl(var(--hsl-base0D));
 }
 
-.cm-editor {
+body {
   --editor-foreground-color: var(--bd-base01);
   --editor-background-color: var(--bd-base00);
   --editor-caret-color: var(--bd-cursor);
@@ -113,7 +113,8 @@
 /*============================================================================
   Syntax colours (classes produced by tokenHighlighter.ts)
   ===========================================================================*/
-.cm-editor {
+.cm-editor,
+.mde-preview .codeblock {
   /* keywords -----------------------------------------------------------*/
   .tok-keyword,
   .tok-operator-keyword,
