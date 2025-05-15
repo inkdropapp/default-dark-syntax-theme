@@ -108,6 +108,8 @@ body {
   --md-table-border-color: var(--bd-bg-highlight);
   --md-table-border-width: 1px;
   --md-table-background-color: hsl(var(--hsl-neutral-900));
+
+  --md-blockquote-border-color: var(--bd-base06);
 }
 
 /*============================================================================
@@ -247,6 +249,7 @@ body {
   }
 
   /* comments -----------------------------------------------------------*/
+  .tok-comment,
   .tok-line-comment,
   .tok-block-comment,
   .tok-doc-comment {
@@ -336,29 +339,5 @@ body {
     /* … */
   }
   .md-task-marker {
-  }
-  .md-blockquote {
-    margin-left: 0.2em;
-    border-left: 0.3em solid var(--bd-base06);
-  }
-  .md-alert-note {
-    margin-left: 0.2em;
-    border-left: 0.3em solid var(--gfm-alert-note);
-  }
-  .md-alert-tip {
-    margin-left: 0.2em;
-    border-left: 0.3em solid var(--gfm-alert-tip);
-  }
-  .md-alert-important {
-    margin-left: 0.2em;
-    border-left: 0.3em solid var(--gfm-alert-important);
-  }
-  .md-alert-warning {
-    margin-left: 0.2em;
-    border-left: 0.3em solid var(--gfm-alert-warning);
-  }
-  .md-alert-caution {
-    margin-left: 0.2em;
-    border-left: 0.3em solid var(--gfm-alert-caution);
   }
 }
