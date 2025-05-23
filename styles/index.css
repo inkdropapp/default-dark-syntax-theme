@@ -101,7 +101,10 @@ body {
   --editor-fold-placeholder-color: var(--bd-base00);
   --editor-fold-placeholder-border: 1px solid var(--bd-base03);
   --editor-fold-placeholder-background-color: var(--bd-base03);
-  --editor-image-widget-backdrop-background-color: hsl(var(--hsl-base01) / 10%);
+  --editor-image-widget-backdrop-background-color: hsl(
+    var(--hsl-neutral-600) / 20%
+  );
+  --editor-image-widget-backdrop-border: 1px solid var(--bd-bg-highlight);
 
   --md-codeblock-border-color: var(--bd-bg-highlight);
   --md-codeblock-border-width: 1px;
