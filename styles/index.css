@@ -42,9 +42,7 @@
   --bd-bg-highlight: hsl(var(--hsl-base02) / 10%);
   --bd-selection: hsl(var(--hsl-base02) / 20%);
   --bd-cursor: hsl(var(--hsl-base0D));
-}
 
-body {
   --editor-foreground-color: var(--bd-base01);
   --editor-background-color: var(--bd-base00);
   --editor-caret-color: var(--bd-cursor);
