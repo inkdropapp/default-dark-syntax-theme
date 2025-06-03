@@ -61,9 +61,11 @@ body {
   --editor-panel-background-color: hsl(var(--hsl-neutral-900));
   --editor-panel-color: var(--bd-base03);
   --editor-panel-border-color: var(--border-color);
-  --editor-tooltip-border: 1px solid var(--bd-bg-highlight);
+  --editor-tooltip-border-style: solid;
+  --editor-tooltip-border-width: 1px;
+  --editor-tooltip-border-color: var(--bd-bg-highlight);
   --editor-tooltip-border-radius: 0.4em;
-  --editor-tooltip-background-color: var(--bd-base00);
+  --editor-tooltip-background-color: hsl(var(--hsl-neutral-900));
   --editor-tooltip-box-shadow: 0px 1px 2px 0 var(--bd-base07);
   --editor-tooltip-autocomplete-padding: 0.2em;
   --editor-tooltip-autocomplete-item-border-radius: 0.2em;
