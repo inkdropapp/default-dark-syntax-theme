@@ -91,7 +91,7 @@
   --editor-search-match-outline: none;
   --editor-search-match-selected-background-color: hsl(var(--hsl-base0A) / 40%);
   --editor-search-match-selected-outline: 1px solid var(--bd-base02);
-  --editor-placeholder-color: var(--bd-base03);
+  --editor-placeholder-color: var(--bd-base06);
   --editor-highlight-space-color: var(--bd-bg-highlight);
   --editor-highlight-tab-background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>');
   --editor-highlight-tab-filter: 'none';
