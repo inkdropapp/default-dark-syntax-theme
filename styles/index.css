@@ -71,6 +71,7 @@
   --editor-tooltip-autocomplete-item-selected-background-color: var(
     --bd-bg-highlight
   );
+  --editor-tooltip-autocomplete-section-border-color: var(--bd-base06);
   --editor-tooltip-autocomplete-item-selected-color: var(--bd-base01);
   --editor-completion-label: var(--bd-base03);
   --editor-completion-matched-text-color: var(--bd-base01);
