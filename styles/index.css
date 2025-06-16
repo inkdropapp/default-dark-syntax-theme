@@ -225,8 +225,10 @@
   }
 
   /* quotes / block-quotes ---------------------------------------------*/
-  .tok-quote:not(.md-alert) {
-    color: var(--bd-base03);
+  @layer quote {
+    .tok-quote:not(.md-alert) {
+      color: var(--bd-base03);
+    }
   }
 
   /* strings ------------------------------------------------------------*/
