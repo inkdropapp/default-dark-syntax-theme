@@ -111,6 +111,9 @@
   --md-codeblock-border-width: 1px;
   --md-codeblock-background-color: hsl(var(--hsl-neutral-600) / 20%);
 
+  --md-inline-mark-background-color: hsl(var(--hsl-yellow-500) / 30%);
+  --md-inline-mark-underline-color: hsl(var(--hsl-yellow-500));
+
   --md-table-border-color: var(--bd-bg-highlight);
   --md-table-border-width: 1px;
   --md-table-background-color: hsl(var(--hsl-neutral-900));
