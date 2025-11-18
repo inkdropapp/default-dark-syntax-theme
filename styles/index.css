@@ -53,8 +53,8 @@
   /* --editor-gutter-border-right: 1px solid hsl(var(--hsl-base01) / 10%); */
   --editor-gutter-border-right: none;
   --editor-gutter-color: var(--bd-base06);
-  --editor-gutter-background-color: hsl(var(--hsl-neutral-900));
   --editor-gutter-background-color: transparent;
+  --editor-gutter-background-solid-color: hsl(var(--hsl-neutral-900));
   --editor-active-line-gutter-background-color: var(--bd-bg-highlight);
   --editor-panel-background-color: hsl(var(--hsl-neutral-900));
   --editor-panel-color: var(--bd-base03);
