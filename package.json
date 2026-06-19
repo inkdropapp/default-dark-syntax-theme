@@ -1,18 +1,14 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": "default-dark-syntax",
   "description": "Default dark syntax theme",
   "theme": "syntax",
-  "scripts": {
-    "build": "lessc styles/less/default.less ./styles/index.css"
-  },
+  "scripts": {},
   "styleSheets": [
     "index.css"
   ],
   "engines": {
-    "inkdrop": "^5.x"
+    "inkdrop": "^6.x"
   },
-  "devDependencies": {
-    "less": "^3.11.3"
-  }
+  "devDependencies": {}
 }
