@@ -1,359 +1,249 @@
-/*── Palette (Base16-ish) ───────────────────────────────────────────────────*/
 :root {
-  --hsl-base00: var(--hsl-neutral-950);
-  --hsl-base01: var(--hsl-neutral-100);
-  --hsl-base02: var(--hsl-blue-200);
-  /* --hsl-base03: 0 0% 69%; */
-  --hsl-base03: var(--hsl-neutral-400);
-  /* --hsl-base04: 0 0% 82%; */
-  --hsl-base04: var(--hsl-neutral-300);
-  /* --hsl-base05: 0 0% 88%; */
-  --hsl-base05: var(--hsl-neutral-200);
-  /* --hsl-base06: 0 0% 50%; */
-  --hsl-base06: var(--hsl-neutral-500);
-  --hsl-base07: var(--hsl-black);
-  --hsl-base08: 1 42% 46%;
-  --hsl-base09: 21 97% 56%;
-  --hsl-base0A: 34 98% 59%;
-  --hsl-base0B: 174 28% 64%;
-  --hsl-base0C: 80 42% 58%;
-  --hsl-base0D: 198 56% 63%;
-  --hsl-base0E: 300 33% 70%;
-  --hsl-base0F: 216 33% 55%;
+  /**
+   * Primitive design tokens are defined in https://github.com/inkdropapp/css/blob/main/tokens.css
+   */
 
-  --bd-base00: hsl(var(--hsl-base00));
-  --bd-base01: hsl(var(--hsl-base01));
-  --bd-base02: hsl(var(--hsl-base02));
-  --bd-base03: hsl(var(--hsl-base03));
-  --bd-base04: hsl(var(--hsl-base04));
-  --bd-base05: hsl(var(--hsl-base05));
-  --bd-base06: hsl(var(--hsl-base06));
-  --bd-base07: hsl(var(--hsl-base07));
-  --bd-base08: hsl(var(--hsl-base08));
-  --bd-base09: hsl(var(--hsl-base09));
-  --bd-base0A: hsl(var(--hsl-base0A));
-  --bd-base0B: hsl(var(--hsl-base0B));
-  --bd-base0C: hsl(var(--hsl-base0C));
-  --bd-base0D: hsl(var(--hsl-base0D));
-  --bd-base0E: hsl(var(--hsl-base0E));
-  --bd-base0F: hsl(var(--hsl-base0F));
-
-  --bd-bg: var(--bd-base00);
-  --bd-bg-highlight: hsl(var(--hsl-base02) / 10%);
-  --bd-selection: hsl(var(--hsl-base02) / 20%);
-  --bd-cursor: hsl(var(--hsl-base0D));
-
-  --editor-foreground-color: var(--bd-base01);
-  --editor-background-color: var(--bd-base00);
-  --editor-caret-color: var(--bd-cursor);
-  --editor-selection-background: var(--bd-selection);
-  --editor-focused-selection-background: var(--bd-selection);
-  --editor-active-line-background-color: var(--bd-bg-highlight);
-  --editor-special-char-color: var(--bd-base0B);
+  /**
+   * Editor UI colors
+   */
+  --editor-foreground-color: var(--color-gray-300);
+  --editor-background-color: var(--color-neutral-950);
+  --editor-caret-color: var(--color-violet-400);
+  --editor-selection-background: hsl(var(--hsl-violet-400) / 13%);
+  --editor-focused-selection-background: hsl(var(--hsl-violet-400) / 30%);
+  --editor-active-line-background-color: hsl(var(--hsl-gray-600) / 20%);
+  --editor-special-char-color: var(--color-gray-600);
   --editor-spelling-error-color: var(--negative-color);
-  /* --editor-gutter-border-right: 1px solid hsl(var(--hsl-base01) / 10%); */
   --editor-gutter-border-right: none;
-  --editor-gutter-color: var(--bd-base06);
+  --editor-gutter-color: var(--color-gray-500);
   --editor-gutter-background-color: transparent;
   --editor-gutter-background-solid-color: hsl(var(--hsl-neutral-900));
-  --editor-active-line-gutter-background-color: var(--bd-bg-highlight);
+  --editor-active-line-gutter-background-color: hsl(var(--hsl-gray-600) / 20%);
   --editor-panel-background-color: hsl(var(--hsl-neutral-900));
-  --editor-panel-color: var(--bd-base03);
+  --editor-panel-color: var(--color-neutral-400);
   --editor-panel-border-color: var(--border-color);
   --editor-tooltip-border-style: solid;
   --editor-tooltip-border-width: 1px;
-  --editor-tooltip-border-color: var(--bd-bg-highlight);
+  --editor-tooltip-border-color: var(--color-gray-600);
   --editor-tooltip-border-radius: 0.8em;
   --editor-tooltip-background-color: hsl(var(--hsl-neutral-900));
-  --editor-tooltip-box-shadow: 0px 1px 2px 0 var(--bd-base07);
+  --editor-tooltip-box-shadow: 0px 1px 2px 0 var(--color-black);
   --editor-tooltip-autocomplete-padding: 0.2em;
   --editor-tooltip-autocomplete-item-border-radius: 0.2em;
   --editor-tooltip-autocomplete-item-padding: 0 0.8em;
   --editor-tooltip-autocomplete-item-selected-background-color: var(
-    --bd-bg-highlight
+    --color-violet-900
   );
-  --editor-tooltip-autocomplete-section-border-color: var(--bd-base06);
-  --editor-tooltip-autocomplete-item-selected-color: var(--bd-base01);
+  --editor-tooltip-autocomplete-section-border-color: var(--color-neutral-500);
+  --editor-tooltip-autocomplete-item-selected-color: var(--color-gray-200);
   --editor-inline-tooltip-color: hsl(var(--hsl-neutral-400));
   --editor-inline-tooltip-background-color: hsl(var(--hsl-neutral-900) / 40%);
-  --editor-inline-tooltip-outline: 1px solid var(--bd-bg-highlight);
-  --editor-completion-label: var(--bd-base03);
-  --editor-completion-matched-text-color: var(--bd-base01);
+  --editor-inline-tooltip-outline: 1px solid var(--color-gray-600);
+  --editor-completion-label: var(--color-neutral-400);
+  --editor-completion-matched-text-color: var(--color-blue-400);
   --editor-completion-matched-text-decoration: none;
   --editor-completion-matched-text-font-style: normal;
   --editor-completion-matched-text-font-weight: bold;
-  --editor-completion-detail-color: var(--bd-base0C);
+  --editor-completion-detail-color: var(--color-pink-300);
   --editor-completion-detail-text-decoration: none;
   --editor-completion-detail-font-style: normal;
   --editor-completion-detail-font-weight: normal;
-  --editor-matching-bracket-outline: 1px solid hsl(var(--hsl-base0D) / 90%);
-  --editor-matching-bracket-background-color: hsl(var(--hsl-base02) / 10%);
-  --editor-nonmatching-bracket-outline: 1px solid var(--bd-base03);
+  --editor-matching-bracket-outline: 1px solid var(--color-gray-600);
+  --editor-matching-bracket-background-color: transparent;
+  --editor-nonmatching-bracket-outline: 1px solid var(--color-gray-600);
   --editor-nonmatching-bracket-background-color: transparent;
-  --editor-selection-match-background-color: hsl(var(--hsl-base0C) / 40%);
+  --editor-selection-match-background-color: hsl(var(--hsl-gray-700));
   --editor-selection-match-outline: none;
-  --editor-search-match-background-color: hsl(var(--hsl-base09) / 40%);
+  --editor-search-match-background-color: hsl(var(--hsl-amber-500) / 25%);
   --editor-search-match-outline: none;
-  --editor-search-match-selected-background-color: hsl(var(--hsl-base0A) / 40%);
-  --editor-search-match-selected-outline: 1px solid var(--bd-base02);
-  --editor-placeholder-color: var(--bd-base06);
-  --editor-nes-ghost-color: var(--bd-base06);
-  --editor-highlight-space-color: var(--bd-bg-highlight);
+  --editor-search-match-selected-background-color: hsl(
+    var(--hsl-amber-500) / 50%
+  );
+  --editor-search-match-selected-outline: 1px solid var(--color-amber-500);
+  --editor-placeholder-color: var(--color-gray-500);
+  --editor-nes-ghost-color: var(--color-gray-500);
+  --editor-highlight-space-color: hsl(var(--hsl-gray-700));
   --editor-highlight-tab-background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>');
   --editor-highlight-tab-filter: 'none';
   --editor-highlight-tab-opacity: 0.3;
-  --editor-trailing-space-background-color: var(--bd-base08);
+  --editor-trailing-space-background-color: var(--color-red-600);
   --editor-fold-placeholder-border-radius: 0.2em;
-  --editor-fold-placeholder-color: var(--bd-base00);
-  --editor-fold-placeholder-border: 1px solid var(--bd-base03);
-  --editor-fold-placeholder-background-color: var(--bd-base03);
+  --editor-fold-placeholder-color: var(--color-neutral-950);
+  --editor-fold-placeholder-border: 1px solid var(--color-neutral-400);
+  --editor-fold-placeholder-background-color: var(--color-neutral-400);
   --editor-image-widget-backdrop-background-color: hsl(
     var(--hsl-neutral-600) / 20%
   );
-  --editor-image-widget-backdrop-border: 1px solid var(--bd-bg-highlight);
+  --editor-image-widget-backdrop-border: 1px solid
+    hsl(var(--hsl-gray-700) / 50%);
 
-  --md-codeblock-border-color: var(--bd-bg-highlight);
+  /**
+   * Tokens
+   */
+  /* One variable per class produced by tokenHighlighter.ts. Modifier variants
+     default to their base token, so each is individually overridable while the
+     theme's appearance is preserved. Tokens this theme does not color fall back
+     to the editor foreground. Colors mapped from the Tailwind Moon theme. */
+
+  /* Comments */
+  --syntax-comment-color: var(--color-gray-400);
+  --syntax-comment-font-style: italic;
+  --syntax-line-comment-color: var(--syntax-comment-color);
+  --syntax-line-comment-font-style: var(--syntax-comment-font-style);
+  --syntax-block-comment-color: var(--syntax-comment-color);
+  --syntax-block-comment-font-style: var(--syntax-comment-font-style);
+  --syntax-doc-comment-color: var(--syntax-comment-color);
+  --syntax-doc-comment-font-style: var(--syntax-comment-font-style);
+
+  /* Names */
+  --syntax-name-color: var(--editor-foreground-color);
+  --syntax-name-constant-color: var(--color-blue-400);
+  --syntax-name-standard-color: var(--color-pink-400);
+  --syntax-name-definition-color: var(--color-pink-400);
+  --syntax-name-function-color: var(--color-cyan-300);
+  --syntax-name-special-color: var(--syntax-name-color);
+  --syntax-name-local-color: var(--syntax-name-color);
+
+  /* Variable names */
+  --syntax-variable-name-color: var(--editor-foreground-color);
+  --syntax-variable-name-constant-color: var(--color-blue-400);
+  --syntax-variable-name-standard-color: var(--color-pink-400);
+  --syntax-variable-name-definition-color: var(--syntax-variable-name-color);
+  --syntax-variable-name-function-color: var(--color-cyan-300);
+  --syntax-variable-name-special-color: var(--syntax-variable-name-color);
+  --syntax-variable-name-local-color: var(--syntax-variable-name-color);
+
+  /* Property names */
+  --syntax-property-name-color: var(--editor-foreground-color);
+  --syntax-property-name-constant-color: var(--color-blue-400);
+  --syntax-property-name-standard-color: var(--color-pink-400);
+  --syntax-property-name-definition-color: var(--syntax-property-name-color);
+  --syntax-property-name-function-color: var(--color-cyan-300);
+  --syntax-property-name-special-color: var(--syntax-property-name-color);
+  --syntax-property-name-local-color: var(--syntax-property-name-color);
+
+  /* Other names */
+  --syntax-tag-name-color: var(--color-blue-400);
+  --syntax-attribute-name-color: var(--color-cyan-300);
+  --syntax-class-name-color: var(--color-pink-400);
+  --syntax-label-name-color: var(--color-pink-400);
+  --syntax-namespace-color: var(--color-pink-400);
+  --syntax-macro-name-color: var(--color-cyan-300);
+
+  /* Strings */
+  --syntax-string-color: var(--color-emerald-400);
+  --syntax-string-special-color: var(--syntax-string-color);
+  --syntax-string-constant-color: var(--syntax-string-color);
+  --syntax-string-standard-color: var(--syntax-string-color);
+
+  /* Numbers & literals */
+  --syntax-number-color: var(--color-blue-400);
+  --syntax-literal-color: var(--color-blue-400);
+  --syntax-character-color: var(--color-blue-400);
+  --syntax-integer-color: var(--color-blue-400);
+  --syntax-float-color: var(--color-blue-400);
+  --syntax-bool-color: var(--color-blue-400);
+  --syntax-regexp-color: var(--color-emerald-400);
+  --syntax-color-color: var(--color-blue-400);
+  --syntax-url-color: var(--color-teal-500);
+  --syntax-attribute-value-color: var(--color-emerald-400);
+
+  /* Keywords */
+  --syntax-self-color: var(--editor-foreground-color);
+  --syntax-null-color: var(--color-blue-400);
+  --syntax-atom-color: var(--color-blue-400);
+  --syntax-unit-color: var(--color-blue-400);
+  --syntax-modifier-color: var(--color-blue-400);
+  --syntax-operator-keyword-color: var(--color-violet-400);
+  --syntax-control-keyword-color: var(--color-violet-400);
+  --syntax-definition-keyword-color: var(--color-blue-400);
+  --syntax-module-keyword-color: var(--color-violet-400);
+  --syntax-keyword-color: var(--color-violet-400);
+
+  /* Operators */
+  --syntax-operator-color: var(--color-violet-400);
+  --syntax-deref-operator-color: var(--syntax-operator-color);
+  --syntax-arithmetic-operator-color: var(--syntax-operator-color);
+  --syntax-logic-operator-color: var(--syntax-operator-color);
+  --syntax-bitwise-operator-color: var(--syntax-operator-color);
+  --syntax-compare-operator-color: var(--syntax-operator-color);
+  --syntax-update-operator-color: var(--syntax-operator-color);
+  --syntax-definition-operator-color: var(--syntax-operator-color);
+  --syntax-type-operator-color: var(--editor-foreground-color);
+  --syntax-control-operator-color: var(--syntax-operator-color);
+
+  /* Punctuation */
+  --syntax-separator-color: var(--color-blue-400);
+  --syntax-angle-bracket-color: var(--color-blue-400);
+  --syntax-square-bracket-color: var(--color-blue-400);
+  --syntax-paren-color: var(--color-blue-400);
+  --syntax-brace-color: var(--color-blue-400);
+  --syntax-bracket-color: var(--color-blue-400);
+  --syntax-punctuation-color: var(--color-blue-400);
+
+  /* Headings & prose */
+  --syntax-heading-color: var(--color-pink-400);
+  --syntax-heading-font-weight: bold;
+  --syntax-heading-1-color: var(--syntax-heading-color);
+  --syntax-heading-1-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-2-color: var(--syntax-heading-color);
+  --syntax-heading-2-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-3-color: var(--syntax-heading-color);
+  --syntax-heading-3-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-4-color: var(--syntax-heading-color);
+  --syntax-heading-4-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-5-color: var(--syntax-heading-color);
+  --syntax-heading-5-font-weight: var(--syntax-heading-font-weight);
+  --syntax-heading-6-color: var(--syntax-heading-color);
+  --syntax-heading-6-font-weight: var(--syntax-heading-font-weight);
+  --syntax-content-separator-color: var(--editor-foreground-color);
+  --syntax-list-color: var(--editor-foreground-color);
+  --syntax-quote-color: var(--color-gray-400);
+  --syntax-quote-font-style: normal;
+  --syntax-emphasis-color: var(--editor-foreground-color);
+  --syntax-emphasis-font-style: italic;
+  --syntax-strong-color: var(--editor-foreground-color);
+  --syntax-strong-font-weight: bold;
+  --syntax-link-color: var(--color-teal-500);
+  --syntax-link-text-decoration: underline;
+  --syntax-strikethrough-text-decoration: line-through;
+  --syntax-monospace-color: var(--editor-foreground-color);
+  --syntax-content-color: var(--editor-foreground-color);
+
+  /* Diffs & meta */
+  --syntax-inserted-color: var(--color-emerald-400);
+  --syntax-deleted-color: var(--color-red-500);
+  --syntax-changed-color: var(--color-amber-500);
+  --syntax-document-meta-color: var(--editor-foreground-color);
+  --syntax-annotation-color: var(--color-cyan-300);
+  --syntax-processing-instruction-color: var(--color-blue-400);
+  --syntax-meta-color: var(--color-gray-400);
+
+  /* Diagnostics */
+  --syntax-invalid-color: var(--color-red-500);
+  --syntax-invalid-border-bottom: 1px dotted var(--syntax-invalid-color);
+
+  /**
+   * Markdown-specific colors
+   */
+  --md-inline-code-padding: 1px;
+  --md-inline-code-border-color: hsl(var(--hsl-blue-200) / 10%);
+  --md-inline-code-border-width: 1px;
+  --md-inline-code-background-color: hsl(var(--hsl-neutral-600) / 20%);
+  --md-codeblock-color: var(--editor-foreground-color);
+  --md-codeblock-border-color: hsl(var(--hsl-blue-200) / 10%);
   --md-codeblock-border-width: 1px;
-  --md-codeblock-background-color: hsl(var(--hsl-neutral-600) / 20%);
+  --md-codeblock-background-color: hsl(var(--hsl-neutral-700) / 20%);
 
+  --md-inline-mark-text-color: var(--editor-foreground-color);
   --md-inline-mark-background-color: hsl(var(--hsl-yellow-500) / 30%);
   --md-inline-mark-underline-color: hsl(var(--hsl-yellow-500));
 
-  --md-table-border-color: var(--bd-bg-highlight);
+  --md-table-border-color: hsl(var(--hsl-blue-200) / 10%);
   --md-table-border-width: 1px;
-  --md-table-background-color: hsl(var(--hsl-neutral-900));
+  --md-table-background-color: hsl(var(--hsl-neutral-700) / 20%);
 
-  --md-blockquote-border-color: var(--bd-base06);
-}
-
-/*============================================================================
-  Syntax colours (classes produced by tokenHighlighter.ts)
-  ===========================================================================*/
-.cm-editor,
-.mde-preview .codeblock {
-  /* keywords -----------------------------------------------------------*/
-  .tok-keyword,
-  .tok-operator-keyword,
-  .tok-module-keyword {
-    color: var(--bd-base0A);
-  }
-
-  /* basic names, deletes, chars, prop- & macro-names -------------------*/
-  .tok-name,
-  .tok-deleted,
-  .tok-character,
-  .tok-property-name,
-  .tok-macro-name {
-    color: var(--bd-base0C);
-  }
-
-  /* variable names -----------------------------------------------------*/
-  .tok-variable-name {
-    color: var(--bd-base0D);
-  }
-
-  /* function identifiers & calls --------------------------------------*/
-  .tok-variable-name.tok-function {
-    color: var(--bd-base0A);
-  }
-
-  /* labels -------------------------------------------------------------*/
-  .tok-label-name {
-    color: var(--bd-base09);
-  }
-
-  /* colour literals, constants, std-lib names --------------------------*/
-  .tok-color,
-  .tok-name.tok-constant,
-  .tok-name.tok-standard {
-    color: var(--bd-base0A);
-  }
-
-  /* definitions & separators ------------------------------------------*/
-  .tok-name.tok-definition,
-  .tok-definition-keyword,
-  .tok-control-keyword,
-  .tok-separator {
-    color: var(--bd-base0E);
-  }
-
-  /* braces, square/angle brackets -------------------------------------*/
-  .tok-brace,
-  .tok-square-bracket,
-  .tok-angle-bracket {
-    color: var(--bd-base0E);
-  }
-
-  /* annotations (highlighted in warning orange) ------------------------*/
-  .tok-annotation {
-    color: var(--bd-base09);
-  }
-
-  /* numbers, changed, modifier, self, namespace ------------------------*/
-  .tok-number,
-  .tok-changed,
-  .tok-modifier,
-  .tok-self,
-  .tok-namespace {
-    color: var(--bd-base0A);
-  }
-
-  /* type & class names -------------------------------------------------*/
-  .tok-type-name,
-  .tok-class-name {
-    color: var(--bd-base0D);
-  }
-
-  /* operators ----------------------------------------------------------*/
-  .tok-operator,
-  .tok-deref-operator,
-  .tok-arithmetic-operator,
-  .tok-logic-operator,
-  .tok-bitwise-operator,
-  .tok-compare-operator,
-  .tok-update-operator,
-  .tok-definition-operator,
-  .tok-control-operator {
-    color: var(--bd-base0E);
-  }
-
-  /* HTML/XML tag names -------------------------------------------------*/
-  .tok-tag-name {
-    color: var(--bd-base0A);
-  }
-
-  /* attribute names ----------------------------------------------------*/
-  .tok-attribute-name {
-    color: var(--bd-base0D);
-  }
-
-  /* regular expressions -----------------------------------------------*/
-  .tok-regexp {
-    color: var(--bd-base0A);
-  }
-
-  /* quotes / block-quotes ---------------------------------------------*/
-  @layer quote {
-    .tok-quote:not(.md-alert) {
-      color: var(--bd-base03);
-    }
-  }
-
-  /* strings ------------------------------------------------------------*/
-  .tok-string {
-    color: var(--bd-base0C);
-  }
-
-  /* links --------------------------------------------------------------*/
-  .tok-link {
-    color: var(--bd-base0F);
-    text-decoration: underline;
-    text-underline-position: under;
-  }
-
-  /* urls, escapes, special strings ------------------------------------*/
-  .tok-url,
-  .tok-link.tok-url,
-  .tok-escape,
-  .tok-string.tok-special {
-    color: var(--bd-base0B);
-  }
-
-  /* meta / pre-processor ----------------------------------------------*/
-  .tok-meta {
-    color: var(--bd-base08);
-  }
-
-  /* comments -----------------------------------------------------------*/
-  .tok-comment,
-  .tok-line-comment,
-  .tok-block-comment,
-  .tok-doc-comment {
-    color: var(--bd-base06);
-    font-style: italic;
-  }
-
-  /* monospace (inline code) -------------------------------------------*/
-  .tok-monospace {
-    color: var(--bd-base01);
-  }
-
-  /* emphasis variants --------------------------------------------------*/
-  .tok-strong {
-    color: var(--bd-base0A);
-    font-weight: bold;
-  }
-  .tok-emphasis {
-    color: var(--bd-base0D);
-    font-style: italic;
-  }
-  .tok-strikethrough {
-    text-decoration: line-through;
-  }
-
-  /* headings -----------------------------------------------------------*/
-  .tok-heading,
-  .tok-heading-1,
-  .tok-heading-2,
-  .tok-heading-3,
-  .tok-heading-4,
-  .tok-heading-5,
-  .tok-heading-6 {
-    color: var(--bd-base01);
-    font-weight: bold;
-  }
-
-  /* atoms, booleans, special vars -------------------------------------*/
-  .tok-atom,
-  .tok-bool,
-  .tok-variable-name.tok-special {
-    color: var(--bd-base0B);
-  }
-
-  /* processing instructions & inserted text ---------------------------*/
-  .tok-processing-instruction,
-  .tok-inserted {
-    color: var(--bd-base0B);
-  }
-
-  /* content separator --------------------------------------------------*/
-  .tok-content-separator {
-    color: var(--bd-base0D);
-  }
-
-  /* invalid / unsyntactic tokens --------------------------------------*/
-  .tok-invalid {
-    color: var(--bd-base02);
-    border-bottom: 1px dotted var(--bd-base09);
-  }
-
-  .md-header-mark {
-    opacity: 1;
-  }
-  .md-hard-break {
-    /* add styles if desired */
-  }
-  .md-quote-mark.tok-quote {
-    color: var(--bd-base0B);
-  }
-  .md-list-mark {
-    /* … */
-  }
-  .md-link-mark {
-    /* … */
-  }
-  .md-emphasis-mark {
-    /* … */
-  }
-  .md-code-mark {
-    /* … */
-  }
-  .md-table-delimiter {
-    /* … */
-  }
-  .md-strikethrough-mark {
-    /* … */
-  }
-  .md-task-marker {
-  }
+  --md-blockquote-border-color: var(--color-neutral-500);
+  --md-list-mark-color: var(--color-indigo-500);
+  --md-task-marker-font-weight: bold;
 }
